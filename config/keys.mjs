@@ -11,11 +11,13 @@ const requiredEnvironmentVariable = (name, disallowedValue) => {
     throw new Error(`Missing required environment variable: ${name}`);
   }
 
-  if (disallowedValue && value === disallowedValue) {
+  const normalizedValue = value.trim();
+
+  if (disallowedValue && normalizedValue === disallowedValue) {
     throw new Error(`Replace the example value for environment variable: ${name}`);
   }
 
-  return value;
+  return normalizedValue;
 };
 
 export const mongoURI = requiredEnvironmentVariable("MONGO_URI");
