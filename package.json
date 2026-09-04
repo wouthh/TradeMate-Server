@@ -23,16 +23,12 @@
     "nodemon": "^1.18.10"
   },
   "scripts": {
-    "start": "nodemon -- --experimental-modules ./bin/www.mjs",
-    "install": "npm install -g npm-check-updates npm && npm rebuild",
-    "install:clean": "rm -f ./package-lock.json && rm -rf ./node_modules && npm install",
-    "update": "ncu -u -a"
+    "start": "nodemon -- --experimental-modules ./bin/www.mjs"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/woutheijnen/TradeMate-Server.git"
   },
-  "author": "Wout Heijnen",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/woutheijnen/TradeMate-Server/issues"
